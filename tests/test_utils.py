@@ -1,6 +1,6 @@
 from unittest import TestCase
 from applocker.policy import AppLockerPolicy
-from applocker.utils import dump, dumps, load, loads
+from applocker.utils import dumps, load, loads
 
 
 class TestUtils(TestCase):
@@ -12,7 +12,7 @@ class TestUtils(TestCase):
         self.assertEqual(dumps(policy), '<AppLockerPolicy Version="1" />')
 
     def test_load(self):
-        with open('tests/files/policy.xml', 'r') as file:
+        with open("tests/files/policy.xml", "r") as file:
             self.assertIsInstance(load(file), AppLockerPolicy)
 
     def test_loads(self):

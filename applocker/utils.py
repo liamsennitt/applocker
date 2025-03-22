@@ -1,9 +1,13 @@
 import sys
 
 from xml.etree.ElementTree import tostring, fromstring
-from applocker.conditions import FilePublisherCondition, FilePathCondition, FileHashCondition
-from applocker.rules import FilePublisherRule, FilePathRule, FileHashRule
-from applocker.policy import AppLockerPolicy
+from applocker.conditions import (
+    FilePublisherCondition, # noqa: F401
+    FilePathCondition, # noqa: F401
+    FileHashCondition, # noqa: F401
+)
+from applocker.rules import FilePublisherRule, FilePathRule, FileHashRule # noqa: F401
+from applocker.policy import AppLockerPolicy # noqa: F401
 
 
 def dump(element, stream):
@@ -11,7 +15,7 @@ def dump(element, stream):
 
 
 def dumps(element):
-    return tostring(element).decode('utf-8')
+    return tostring(element).decode("utf-8")
 
 
 def load(stream):

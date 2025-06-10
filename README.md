@@ -11,7 +11,7 @@ The `applocker` module allows you to easily parse and create Windows AppLocker P
 To install the `applocker` module via pip, run the command:
 
 ```console
-$ pip install applocker
+pip install applocker
 ```
 
 ## Usage
@@ -50,9 +50,9 @@ applocker.dumps(policy)
 
 ### FilePublisherRule
 
-To create a file publisher AppLocker rule to allow or deny digitally signed files, a `applocker.conditions.FilePublisherCondition` must be created optionally specifying a `applocker.conditions.BinaryVersionRange`.
+To create a file publisher AppLocker rule to allow or deny digitally signed files, a `FilePublisherCondition` must be created optionally specifying a `BinaryVersionRange`.
 
-This condition can then be used to create a `applocker.rules.FilePublisherRule`.
+This condition can then be used to create a `FilePublisherRule`.
 
 ```python
 from applocker.conditions import BinaryVersionRange, FilePublisherCondition
@@ -81,9 +81,9 @@ rule = FilePublisherRule(
 
 ### FilePathRule
 
-To create a file path AppLocker rule to allow or deny files based upon their path, a `applocker.conditions.FilePathCondition` condition must be created.
+To create a file path AppLocker rule to allow or deny files based upon their path, a `FilePathCondition` condition must be created.
 
-This condition can then be used to create a `applocker.rules.FilePathRule`.
+This condition can then be used to create a `FilePathRule`.
 
 ```python
 from applocker.conditions import FilePathCondition
@@ -105,9 +105,9 @@ rule = FilePathRule(
 
 ### FileHashRule
 
-To create a file hash AppLocker rule to allow or deny files based upon their hash, one or more `applocker.conditions.FileHash` objects and a `applocker.conditions.FileHashCondition` condition must be created.
+To create a file hash AppLocker rule to allow or deny files based upon their hash, one or more `FileHash` objects and a `FileHashCondition` condition must be created.
 
-This condition can then be used to create a `applocker.rules.FileHashRule`.
+This condition can then be used to create a `FileHashRule`.
 
 ```python
 from applocker.conditions import FileHash, FileHashCondition
@@ -138,7 +138,7 @@ rule = FileHashRule(
 
 To create a rule collection one or more rules must be created as described above.
 
-These rules can then be used to create a `applocker.rules.RuleCollection`.
+These rules can then be used to create a `RuleCollection`.
 
 ```python
 from applocker.rules import RuleCollection
@@ -156,7 +156,7 @@ rule_collection = RuleCollection(
 
 To create an AppLocker Policy one or more rule collections must be created as described above.
 
-These rule collections can then be used to create an `applocker.policy.AppLockerPolicy`.
+These rule collections can then be used to create an `AppLockerPolicy`.
 
 ```python
 from applocker.policy import AppLockerPolicy

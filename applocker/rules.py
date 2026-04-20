@@ -86,7 +86,7 @@ class _Rule(Element):
 
     @property
     def conditions(self):
-        return list(self.find("Conditions"))
+        return list(self.find("Conditions") or [])
 
     @conditions.setter
     def conditions(self, conditions):
@@ -122,7 +122,7 @@ class _Rule(Element):
             description=element.get("Description"),
             user_or_group_sid=element.get("UserOrGroupSid"),
             action=element.get("Action"),
-            conditions=list(element.find("Conditions")),
+            conditions=list(element.find("Conditions") or []),
         )
 
 

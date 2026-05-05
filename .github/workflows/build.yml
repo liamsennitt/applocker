@@ -26,7 +26,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
     - name: Install the project
-      run: uv sync --dev
+      run: uv sync --dev --frozen
 
     - name: Run ruff
       run: uv run ruff check --output-format=github

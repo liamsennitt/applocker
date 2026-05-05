@@ -1,4 +1,5 @@
 from xml.etree.ElementTree import Element
+
 from applocker.rules import RuleCollection
 
 

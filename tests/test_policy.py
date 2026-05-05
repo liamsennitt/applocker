@@ -1,6 +1,7 @@
 from unittest import TestCase
-from applocker.rules import RuleCollection
+
 from applocker.policy import AppLockerPolicy
+from applocker.rules import RuleCollection
 
 
 class TestRuleCollection(TestCase):

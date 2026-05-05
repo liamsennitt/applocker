@@ -1,10 +1,11 @@
 from unittest import TestCase
+
 from applocker.conditions import (
     BinaryVersionRange,
-    FilePublisherCondition,
-    FilePathCondition,
     FileHash,
     FileHashCondition,
+    FilePathCondition,
+    FilePublisherCondition,
 )
 
 

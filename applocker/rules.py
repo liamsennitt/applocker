@@ -1,11 +1,11 @@
 import sys
 import uuid
-
 from xml.etree.ElementTree import Element
+
 from applocker.conditions import (
-    FilePublisherCondition,
-    FilePathCondition,
     FileHashCondition,
+    FilePathCondition,
+    FilePublisherCondition,
 )
 
 

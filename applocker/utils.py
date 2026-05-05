@@ -1,13 +1,13 @@
 import sys
+from xml.etree.ElementTree import fromstring, tostring
 
-from xml.etree.ElementTree import tostring, fromstring
 from applocker.conditions import (
-    FilePublisherCondition, # noqa: F401
-    FilePathCondition, # noqa: F401
-    FileHashCondition, # noqa: F401
+    FileHashCondition,  # noqa: F401
+    FilePathCondition,  # noqa: F401
+    FilePublisherCondition,  # noqa: F401
 )
-from applocker.rules import FilePublisherRule, FilePathRule, FileHashRule # noqa: F401
-from applocker.policy import AppLockerPolicy # noqa: F401
+from applocker.policy import AppLockerPolicy  # noqa: F401
+from applocker.rules import FileHashRule, FilePathRule, FilePublisherRule  # noqa: F401
 
 
 def dump(element, stream):

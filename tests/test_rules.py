@@ -1,6 +1,7 @@
 from unittest import TestCase
+
 from applocker.conditions import FilePathCondition
-from applocker.rules import _Rule, FilePathRule, RuleCollection
+from applocker.rules import FilePathRule, RuleCollection, _Rule
 
 
 class TestRule(TestCase):

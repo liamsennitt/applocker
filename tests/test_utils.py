@@ -1,4 +1,5 @@
 from unittest import TestCase
+
 from applocker.policy import AppLockerPolicy
 from applocker.utils import dumps, load, loads
 
